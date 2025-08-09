@@ -283,16 +283,20 @@ function PatientDashboard({ onBack, onNavigate }) {
                 <div className="h-px bg-black/10 dark:bg-white/10"></div>
             </div>
 
-            <main className="p-6 flex-grow">
+            <main className="p-6 flex-grow flex flex-col">
                 <div className="grid grid-cols-2 gap-5">
-                    <div onClick={() => handleCardClick('sos', 'SOS')}
-                         className="col-span-2 flex flex-col items-center justify-center p-6 rounded-3xl text-white cursor-pointer bg-gradient-to-br from-red-500 to-orange-500 border border-white/30 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all">
-                        <Icon name="alert-octagon" className="w-12 h-12" />
-                        <span className="mt-2 text-xl font-bold">SOS</span>
-                    </div>
                     {featureCardsData.map((card) => (
                         <FeatureCard key={card.id} {...card} onClick={() => handleCardClick(card.id, card.title)} />
                     ))}
+                </div>
+                <div className="flex-grow flex items-center justify-center">
+                    <div
+                        onClick={() => handleCardClick('sos', 'SOS')}
+                        className="flex flex-col items-center justify-center w-32 h-32 rounded-full text-white cursor-pointer bg-gradient-to-br from-red-500 to-orange-500 border-4 border-white/30 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all"
+                    >
+                        <Icon name="alert-octagon" className="w-10 h-10" />
+                        <span className="mt-1 text-lg font-bold">SOS</span>
+                    </div>
                 </div>
             </main>
 
@@ -357,16 +361,20 @@ function CaretakerDashboard({ onBack, onNavigate }) {
                 <div className="h-px bg-black/10 dark:bg-white/10"></div>
             </div>
 
-            <main className="p-6 flex-grow">
+            <main className="p-6 flex-grow flex flex-col">
                 <div className="grid grid-cols-2 gap-5">
-                    <div onClick={() => handleCardClick('sos', 'SOS')}
-                         className="col-span-2 flex flex-col items-center justify-center p-6 rounded-3xl text-white cursor-pointer bg-gradient-to-br from-red-500 to-orange-500 border border-white/30 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all">
-                        <Icon name="alert-octagon" className="w-12 h-12" />
-                        <span className="mt-2 text-xl font-bold">SOS</span>
-                    </div>
                     {featureCardsData.map((card) => (
                         <FeatureCard key={card.id} {...card} onClick={() => handleCardClick(card.id, card.title)} />
                     ))}
+                </div>
+                 <div className="flex-grow flex items-center justify-center">
+                    <div
+                        onClick={() => handleCardClick('sos', 'SOS')}
+                        className="flex flex-col items-center justify-center w-32 h-32 rounded-full text-white cursor-pointer bg-gradient-to-br from-red-500 to-orange-500 border-4 border-white/30 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all"
+                    >
+                        <Icon name="alert-octagon" className="w-10 h-10" />
+                        <span className="mt-1 text-lg font-bold">SOS</span>
+                    </div>
                 </div>
             </main>
 
@@ -611,3 +619,4 @@ export default function App() {
     </div>
   );
 }
+
